@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+/* ======================================= header_starting ========================= */
+header{
+    position: relative;
+    background: teal;
+    padding: 20px 0;
+    min-height: 540px;
+}
+header .swiper-container {
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+header .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 270px;
+    height: 380px;
+}
+header .cart img{
+    width: 100%;
+    height: 210px;
+}
+header .cart {
+    width: 100%;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all .2s;
+    position: relative;
+    padding: 20px;
+    overflow: hidden;
+}
+header .cart .fa-check-circle{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: green;
+    font-size: 40px;
+}
+header h1{
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 700;
+    color: red;
+    text-transform: uppercase;
+    text-align:center;
+}
+header .cart-body {
+    text-align: center;
+}
+header h2{
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+    color: cornflowerblue;
+    text-transform: uppercase;
+}
+header .cart .cart-body .open{
+    border: none;
+    padding: 4px 15px;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    font-size: 24px;
+    display: block;
+    background: green;
+    margin: 10px auto 0;
+}
+header .cart .price {
+    font-size: 24px;
+    text-align: start;
+    color: white;
+    font-weight: 600;
+    margin: 20px 0 10px;
+}
+header .color{
+    position: relative;
+}
+header .total {
+    background: white;
+    color: black;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 15px;
+    padding: 20px;
+    z-index: 5;
+}
+header .back{
+    background: white;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+}
+header .back.active{
+    animation: top 1s linear;
+    z-index: 1;
+}
+@keyframes top {
+    0%{
+        width: 0;
+        background: lime;
+    }
+    100%{
+        width: 200px; 
+        background: lime;
+    }
+}
+header .menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    background: rgba(0, 0, 0, 0.729);
+    height: 100%;
+    padding: 20px;
+    transition: all ease-in-out 0.3s;
+    border: 2px solid white;
+}
+header .menu p{
+    font-size: 20px;
+    text-align: start;
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+header .cart-body img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+header .menu .submit{
+    width: 70px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: dodgerblue;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+header .menu .down{
+    width: 60px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background:red;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+header .menu .icon .fa{
+   width: 40px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   font-size: 20px; 
+}
+header .menu .fa-plus{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    background: lime;
+}
+header .menu .fa-minus{
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: red;
+    transition: all ease-in-out 0.3s;
+}
+header .result{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+    color: black;
+    width: 350px;
+    padding: 10px;
+    border: 3px dashed black;
+    z-index: 4;
+    transition: all ease-in-out 0.8s;
+    font-size: 20px;
+    background: gold;
+}
+header .result p{
+    font-size: 30px;
+    font-weight: 700;
+    color: blue;
+}
+header .good{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    padding: 8px 10px;
+    width: 150px;
+    background: blue;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    transition: all ease-in-out 0.8s;
+}
+header .send{
+    outline: none;
+    border: none;
+    background: dodgerblue;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+header .result .texts{
+    text-align: start;
+}
+@media(max-width: 767px){
+    header .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 220px;
+        height: 340px;
+    }
+    header .cart img{
+        width: 100%;
+        height: 180px;
+    }
+    header .cart-body img{
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+    }
+}
+@media(max-width: 575px){
+    header .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 180px;
+        height: 280px;
+    }
+    header .cart img{
+        width: 100%;
+        height: 160px;
+    }
+    header .cart-body img{
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+    }
+    header h2{
+        font-size: 20px;
+    }
+    header .cart {
+        padding: 10px;
+    }
+    header .menu .submit, header .menu .down{
+        margin-top: 25px;
+    }
+    header .cart .price{
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    header .cart .cart-body .open{
+        padding: 3px 10px;
+        font-size: 20px;
+    }
+    header .menu .icon .fa{
+        width: 35px;
+        height: 35px;
+     }
+     header .cart .fa-check-circle{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: green;
+        font-size: 40px;
+    }
+    header .menu{
+        padding: 10px;
+    }
+    header .result{
+        width: 280px;
+        padding: 10px 5px;
+        font-size: 16px;
+    }
+    header .good{
+        font-size: 18px;
+        padding: 6px 8px;
+        width: 120px;
+    }
+    header .total {
+        background: white;
+        color: black;
+        width: 200px;
+        margin-top: 15px;
+        /* padding: 20px; */
+        z-index: 5;
+    }
+    header h1{
+        margin-bottom: 10px;
+    }
+}
